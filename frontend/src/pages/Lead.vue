@@ -35,9 +35,17 @@
       </Dropdown>
       <Button
         :label="__('Convert to Deal')"
+        :class="{ 'min-w-[90px]': true, 'overflow-hidden': true }"
         variant="solid"
         @click="showConvertToDealModal = true"
-      />
+      >
+        <template #prefix>
+          <FeatherIcon name="plus" class="h-4 w-4" />
+        </template>
+        <template #default>
+          <span class="truncate">{{ __('Convert') }}</span>
+        </template>
+      </Button>
     </template>
   </LayoutHeader>
   <div v-if="lead?.data" class="flex h-full overflow-hidden">
@@ -126,6 +134,24 @@
                     <PhoneIcon class="h-4 w-4" />
                   </Button>
                 </Tooltip>
+                <Tooltip :text="__('Call via phone app')">
+                  <Button
+                    v-if="lead.data.mobile_no && !callEnabled"
+                    size="sm"
+                    @click.once="trackPhoneActivities('phone')"
+                  >
+                    <PhoneIcon class="h-4 w-4" />
+                  </Button>
+                </Tooltip>
+                <Tooltip :text="__('Open WhatsApp')">
+                  <Button
+                    v-if="lead.data.mobile_no"
+                    size="sm"
+                    @click.once="trackPhoneActivities('whatsapp')"
+                  >
+                    <WhatsAppIcon class="h-4 w-4" />
+                  </Button>
+                </Tooltip>
                 <Tooltip :text="__('Send an email')">
                   <Button class="h-7 w-7">
                     <Email2Icon
@@ -170,7 +196,7 @@
         v-if="fieldsLayout.data"
         class="flex flex-1 flex-col justify-between overflow-hidden"
       >
-        <div class="flex flex-col overflow-y-auto">
+        <div class="flex flex-col overflow-y-auto dark-scrollbar">
           <div
             v-for="(section, i) in fieldsLayout.data"
             :key="section.label"
@@ -354,6 +380,7 @@ import {
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useActiveTabManager } from '@/composables/useActiveTabManager'
+import { trackCommunication } from '@/utils/communicationUtils'
 
 const { $dialog, $socket, makeCall } = globalStore()
 const { getContactByName, contacts } = contactsStore()
@@ -566,7 +593,35 @@ const fieldsLayout = createResource({
   cache: ['fieldsLayout', props.leadId],
   params: { doctype: 'CRM Lead', name: props.leadId },
   auto: true,
+  transform: (data) => getParsedFields(data)
 })
+
+function getParsedFields(sections) {
+  if (!sections?.[0]?.sections) return []
+  
+  const sectionList = sections[0].sections
+  sectionList.forEach((section) => {
+    // Convert array of field names to array of field objects if needed
+    if (Array.isArray(section.fields) && typeof section.fields[0] === 'string') {
+      section.fields = section.fields.map(fieldName => ({
+        name: fieldName,
+        label: fieldName.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
+        type: 'text', // default type
+        all_properties: {}, // required by SidePanelLayout
+      }))
+    }
+
+    section.fields?.forEach((field) => {
+      if (field.name == 'organization') {
+        field.type = 'link'
+        field.doctype = 'CRM Organization'
+      } else if (field.name == 'lead_owner') {
+        field.type = 'User'
+      }
+    })
+  })
+  return sectionList
+}
 
 function updateField(name, value, callback) {
   updateLead(name, value, () => {
@@ -665,5 +720,16 @@ const activities = ref(null)
 
 function openEmailBox() {
   activities.value.emailBox.show = true
+}
+
+function trackPhoneActivities(type = 'phone') {
+  trackCommunication({
+    type,
+    doctype: 'CRM Lead',
+    docname: lead.data.name,
+    phoneNumber: lead.data.mobile_no,
+    activities: activities.value,
+    contactName: lead.data.lead_name,
+  })
 }
 </script>

@@ -146,7 +146,7 @@ const dialogOptions = computed(() => {
   let size = 'xl'
   let actions = [
     {
-      label: editMode.value ? 'Save' : 'Create',
+      label: editMode.value ? __('Save') : __('Create'),
       variant: 'solid',
       disabled: !dirty.value,
       onClick: () => (editMode.value ? updateContact() : callInsertDoc()),
