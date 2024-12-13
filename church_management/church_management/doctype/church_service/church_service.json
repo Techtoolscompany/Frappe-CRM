@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SER-{####}",
+ "creation": "2024-01-17 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "service_type",
+  "date",
+  "start_time",
+  "end_time",
+  "column_break_5",
+  "status",
+  "attendance_count",
+  "section_break_8",
+  "description",
+  "sermon_notes",
+  "section_break_11",
+  "service_team",
+  "section_break_13",
+  "offerings_section",
+  "total_offering",
+  "offering_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Service Type",
+   "options": "Sunday Service\nMidweek Service\nPrayer Meeting\nSpecial Event\nYouth Service\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "attendance_count",
+   "fieldtype": "Int",
+   "label": "Attendance Count"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Service Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "sermon_notes",
+   "fieldtype": "Text Editor",
+   "label": "Sermon Notes"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Service Team"
+  },
+  {
+   "fieldname": "service_team",
+   "fieldtype": "Table",
+   "label": "Service Team",
+   "options": "Church Service Team Member"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "offerings_section",
+   "fieldtype": "Section Break",
+   "label": "Offerings"
+  },
+  {
+   "fieldname": "total_offering",
+   "fieldtype": "Currency",
+   "label": "Total Offering"
+  },
+  {
+   "fieldname": "offering_details",
+   "fieldtype": "Table",
+   "label": "Offering Details",
+   "options": "Church Service Offering"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Church Management",
+ "name": "Church Service",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

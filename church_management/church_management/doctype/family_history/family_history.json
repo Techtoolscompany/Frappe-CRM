@@ -1,0 +1,181 @@
+{
+ "actions": [],
+ "creation": "2024-01-17 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "member",
+  "family_unit",
+  "change_type",
+  "column_break_4",
+  "change_date",
+  "changed_by",
+  "section_break_7",
+  "old_values_section",
+  "old_family_role",
+  "old_family_status",
+  "old_primary_contact",
+  "column_break_12",
+  "new_values_section",
+  "new_family_role",
+  "new_family_status",
+  "new_primary_contact",
+  "section_break_17",
+  "change_reason",
+  "additional_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "Church Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "family_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Family Unit",
+   "options": "Family Unit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "change_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Change Type",
+   "options": "Role Change\nStatus Change\nPrimary Contact Change\nFamily Unit Change\nRelationship Change",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "change_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Change Date",
+   "reqd": 1
+  },
+  {
+   "default": "__user",
+   "fieldname": "changed_by",
+   "fieldtype": "Link",
+   "label": "Changed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "old_values_section",
+   "fieldtype": "Section Break",
+   "label": "Previous Values"
+  },
+  {
+   "fieldname": "old_family_role",
+   "fieldtype": "Select",
+   "label": "Previous Family Role",
+   "options": "Head of Household\nSpouse\nChild\nDependent\nOther"
+  },
+  {
+   "fieldname": "old_family_status",
+   "fieldtype": "Select",
+   "label": "Previous Family Status",
+   "options": "Active\nInactive\nTemporary\nArchived"
+  },
+  {
+   "default": "0",
+   "fieldname": "old_primary_contact",
+   "fieldtype": "Check",
+   "label": "Was Primary Contact"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "new_values_section",
+   "fieldtype": "Section Break",
+   "label": "New Values"
+  },
+  {
+   "fieldname": "new_family_role",
+   "fieldtype": "Select",
+   "label": "New Family Role",
+   "options": "Head of Household\nSpouse\nChild\nDependent\nOther"
+  },
+  {
+   "fieldname": "new_family_status",
+   "fieldtype": "Select",
+   "label": "New Family Status",
+   "options": "Active\nInactive\nTemporary\nArchived"
+  },
+  {
+   "default": "0",
+   "fieldname": "new_primary_contact",
+   "fieldtype": "Check",
+   "label": "Is Primary Contact"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "change_reason",
+   "fieldtype": "Small Text",
+   "label": "Reason for Change",
+   "reqd": 1
+  },
+  {
+   "fieldname": "additional_notes",
+   "fieldtype": "Text Editor",
+   "label": "Additional Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Church Management",
+ "name": "Family History",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Church Pastor",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

@@ -1,0 +1,279 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:MEM-{####}",
+ "creation": "2024-01-17 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "first_name",
+  "last_name",
+  "email",
+  "phone",
+  "column_break_5",
+  "date_of_birth",
+  "join_date",
+  "status",
+  "address_section",
+  "address",
+  "city",
+  "state",
+  "country",
+  "family_relationships_section",
+  "primary_family_unit",
+  "family_role",
+  "family_status",
+  "column_break_19",
+  "family_primary_contact",
+  "secondary_family_units",
+  "relationships_section",
+  "family_relationships",
+  "family_communication_section",
+  "preferred_contact_time",
+  "preferred_contact_day",
+  "preferred_language",
+  "column_break_28",
+  "allow_home_visits",
+  "allow_phone_calls",
+  "allow_emails",
+  "ministry_section",
+  "ministry_roles",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "join_date",
+   "fieldtype": "Date",
+   "label": "Join Date"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nVisitor"
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address Information"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "family_relationships_section",
+   "fieldtype": "Section Break",
+   "label": "Family Relationships"
+  },
+  {
+   "fieldname": "primary_family_unit",
+   "fieldtype": "Link",
+   "label": "Primary Family Unit",
+   "options": "Family Unit"
+  },
+  {
+   "fieldname": "family_role",
+   "fieldtype": "Select",
+   "label": "Family Role",
+   "options": "Head of Household\nSpouse\nChild\nDependent\nOther"
+  },
+  {
+   "default": "Active",
+   "fieldname": "family_status",
+   "fieldtype": "Select",
+   "label": "Family Status",
+   "options": "Active\nInactive\nTemporary\nArchived"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "family_primary_contact",
+   "fieldtype": "Check",
+   "label": "Family Primary Contact"
+  },
+  {
+   "fieldname": "secondary_family_units",
+   "fieldtype": "Table",
+   "label": "Secondary Family Units",
+   "options": "Secondary Family Unit"
+  },
+  {
+   "fieldname": "relationships_section",
+   "fieldtype": "Section Break",
+   "label": "Family Relationships"
+  },
+  {
+   "fieldname": "family_relationships",
+   "fieldtype": "Table",
+   "label": "Family Relationships",
+   "options": "Family Relationship"
+  },
+  {
+   "fieldname": "family_communication_section",
+   "fieldtype": "Section Break",
+   "label": "Family Communication Preferences"
+  },
+  {
+   "fieldname": "preferred_contact_time",
+   "fieldtype": "Select",
+   "label": "Preferred Contact Time",
+   "options": "Morning\nAfternoon\nEvening\nAny Time"
+  },
+  {
+   "fieldname": "preferred_contact_day",
+   "fieldtype": "Select",
+   "label": "Preferred Contact Day",
+   "options": "Weekdays\nWeekends\nAny Day"
+  },
+  {
+   "fieldname": "preferred_language",
+   "fieldtype": "Data",
+   "label": "Preferred Language"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_home_visits",
+   "fieldtype": "Check",
+   "label": "Allow Home Visits"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_phone_calls",
+   "fieldtype": "Check",
+   "label": "Allow Phone Calls"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_emails",
+   "fieldtype": "Check",
+   "label": "Allow Emails"
+  },
+  {
+   "fieldname": "ministry_section",
+   "fieldtype": "Section Break",
+   "label": "Ministry Information"
+  },
+  {
+   "fieldname": "ministry_roles",
+   "fieldtype": "Table MultiSelect",
+   "label": "Ministry Roles",
+   "options": "Church Ministry Role"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Family",
+   "link_doctype": "Family Unit",
+   "link_fieldname": "primary_family_unit"
+  },
+  {
+   "group": "History",
+   "link_doctype": "Family History",
+   "link_fieldname": "member"
+  },
+  {
+   "group": "Relationships",
+   "link_doctype": "Family Relationship",
+   "link_fieldname": "member"
+  }
+ ],
+ "modified": "2024-01-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Church Management",
+ "name": "Church Member",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

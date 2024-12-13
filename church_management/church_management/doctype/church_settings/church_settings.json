@@ -1,0 +1,187 @@
+{
+ "actions": [],
+ "creation": "2024-01-17 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "church_information_section",
+  "church_name",
+  "address",
+  "contact_email",
+  "contact_phone",
+  "column_break_6",
+  "denomination",
+  "website",
+  "section_break_9",
+  "service_settings_section",
+  "default_service_duration",
+  "default_currency",
+  "enable_online_services",
+  "column_break_14",
+  "default_service_time",
+  "attendance_tracking_method",
+  "section_break_17",
+  "notification_settings_section",
+  "enable_birthday_notifications",
+  "enable_service_reminders",
+  "enable_offering_reports",
+  "column_break_22",
+  "notification_email",
+  "advance_reminder_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "church_information_section",
+   "fieldtype": "Section Break",
+   "label": "Church Information"
+  },
+  {
+   "fieldname": "church_name",
+   "fieldtype": "Data",
+   "label": "Church Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "denomination",
+   "fieldtype": "Data",
+   "label": "Denomination"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website",
+   "options": "URL"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "service_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Service Settings"
+  },
+  {
+   "default": "02:00:00",
+   "fieldname": "default_service_duration",
+   "fieldtype": "Time",
+   "label": "Default Service Duration"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Default Currency",
+   "options": "Currency"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_online_services",
+   "fieldtype": "Check",
+   "label": "Enable Online Services"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_service_time",
+   "fieldtype": "Time",
+   "label": "Default Service Time"
+  },
+  {
+   "default": "Manual",
+   "fieldname": "attendance_tracking_method",
+   "fieldtype": "Select",
+   "label": "Attendance Tracking Method",
+   "options": "Manual\nQR Code\nBiometric"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notification_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Notification Settings"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_birthday_notifications",
+   "fieldtype": "Check",
+   "label": "Enable Birthday Notifications"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_service_reminders",
+   "fieldtype": "Check",
+   "label": "Enable Service Reminders"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_offering_reports",
+   "fieldtype": "Check",
+   "label": "Enable Offering Reports"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notification_email",
+   "fieldtype": "Data",
+   "label": "Notification Email",
+   "options": "Email"
+  },
+  {
+   "default": "1",
+   "fieldname": "advance_reminder_days",
+   "fieldtype": "Int",
+   "label": "Advance Reminder Days"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-01-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Church Management",
+ "name": "Church Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

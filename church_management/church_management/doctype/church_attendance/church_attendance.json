@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ATT-{####}",
+ "creation": "2024-01-17 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "attendance_date",
+  "attendance_type",
+  "reference_type",
+  "reference_name",
+  "column_break_5",
+  "total_attendance",
+  "men_count",
+  "women_count",
+  "children_count",
+  "section_break_10",
+  "attendance_details",
+  "section_break_12",
+  "notes",
+  "recorded_by"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Attendance Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Attendance Type",
+   "options": "Service\nEvent\nSmall Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reference_type",
+   "fieldtype": "Select",
+   "label": "Reference Type",
+   "options": "Church Service\nChurch Event\nChurch Small Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Name",
+   "options": "reference_type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_attendance",
+   "fieldtype": "Int",
+   "label": "Total Attendance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "men_count",
+   "fieldtype": "Int",
+   "label": "Men Count"
+  },
+  {
+   "fieldname": "women_count",
+   "fieldtype": "Int",
+   "label": "Women Count"
+  },
+  {
+   "fieldname": "children_count",
+   "fieldtype": "Int",
+   "label": "Children Count"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Attendance Details"
+  },
+  {
+   "fieldname": "attendance_details",
+   "fieldtype": "Table",
+   "label": "Attendance Details",
+   "options": "Church Attendance Detail"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "recorded_by",
+   "fieldtype": "Link",
+   "label": "Recorded By",
+   "options": "User",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Church Management",
+ "name": "Church Attendance",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

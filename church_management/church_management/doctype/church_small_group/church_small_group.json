@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GRP-{####}",
+ "creation": "2024-01-17 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "group_name",
+  "group_type",
+  "meeting_day",
+  "meeting_time",
+  "column_break_5",
+  "status",
+  "capacity",
+  "current_members",
+  "section_break_9",
+  "description",
+  "meeting_location",
+  "section_break_12",
+  "group_leader_section",
+  "primary_leader",
+  "co_leader",
+  "section_break_16",
+  "members_section",
+  "members"
+ ],
+ "fields": [
+  {
+   "fieldname": "group_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Group Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "group_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Group Type",
+   "options": "Home Fellowship\nBible Study\nPrayer Group\nYouth Group\nWomen's Group\nMen's Group\nMarriage Group\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meeting_day",
+   "fieldtype": "Select",
+   "label": "Meeting Day",
+   "options": "Sunday\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday"
+  },
+  {
+   "fieldname": "meeting_time",
+   "fieldtype": "Time",
+   "label": "Meeting Time"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nOn Hold"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "label": "Maximum Capacity"
+  },
+  {
+   "fieldname": "current_members",
+   "fieldtype": "Int",
+   "label": "Current Members",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Group Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "meeting_location",
+   "fieldtype": "Small Text",
+   "label": "Meeting Location"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "group_leader_section",
+   "fieldtype": "Section Break",
+   "label": "Leadership"
+  },
+  {
+   "fieldname": "primary_leader",
+   "fieldtype": "Link",
+   "label": "Primary Leader",
+   "options": "Church Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "co_leader",
+   "fieldtype": "Link",
+   "label": "Co-Leader",
+   "options": "Church Member"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "members_section",
+   "fieldtype": "Section Break",
+   "label": "Members"
+  },
+  {
+   "fieldname": "members",
+   "fieldtype": "Table",
+   "label": "Members",
+   "options": "Church Small Group Member"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Church Management",
+ "name": "Church Small Group",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

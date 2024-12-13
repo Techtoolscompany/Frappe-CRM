@@ -1,0 +1,45 @@
+{% extends "templates/web.html" %}
+
+{% block title %}Birthday Reminder{% endblock %}
+
+{% block page_content %}
+<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="color: #2c5282; margin: 0;">Birthday Reminder</h2>
+        <p style="color: #4a5568; font-size: 16px; margin-top: 10px;">{{ church_name }}</p>
+    </div>
+
+    <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; margin-bottom: 30px;">
+        <p style="font-size: 16px; color: #4a5568; margin: 0;">
+            Dear {{ recipient_name }},
+        </p>
+        
+        <p style="font-size: 16px; color: #4a5568; margin-top: 20px;">
+            This is a friendly reminder that <strong>{{ member_name }}</strong> has a birthday coming up on <strong>{{ birthday_date }}</strong>.
+        </p>
+    </div>
+
+    <div style="background-color: #ebf4ff; padding: 15px; border-radius: 5px; margin-bottom: 30px;">
+        <h3 style="color: #2c5282; margin: 0 0 10px 0;">Birthday Details</h3>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 8px 0; color: #4a5568; width: 120px;">Name:</td>
+                <td style="padding: 8px 0; color: #2c5282; font-weight: bold;">{{ member_name }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0; color: #4a5568;">Date:</td>
+                <td style="padding: 8px 0; color: #2c5282; font-weight: bold;">{{ birthday_date }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="margin-top: 30px; text-align: center;">
+        <p style="color: #718096; font-size: 14px; margin: 5px 0;">
+            This is an automated reminder from the Church Management System.
+        </p>
+        <p style="color: #718096; font-size: 14px; margin: 5px 0;">
+            {{ church_name }}
+        </p>
+    </div>
+</div>
+{% endblock %}

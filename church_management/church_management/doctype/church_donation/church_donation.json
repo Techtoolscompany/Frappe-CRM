@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:DON-{####}",
+ "creation": "2024-01-17 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "donor_section",
+  "donor_type",
+  "donor_name",
+  "donor_member",
+  "contact_details",
+  "column_break_6",
+  "donation_date",
+  "donation_number",
+  "receipt_required",
+  "section_break_10",
+  "donation_details_section",
+  "donation_type",
+  "amount",
+  "payment_method",
+  "column_break_15",
+  "payment_status",
+  "reference_number",
+  "section_break_18",
+  "purpose",
+  "notes",
+  "section_break_21",
+  "tax_details_section",
+  "tax_receipt_number",
+  "tax_receipt_date",
+  "column_break_25",
+  "tax_receipt_status",
+  "tax_receipt_sent"
+ ],
+ "fields": [
+  {
+   "fieldname": "donor_section",
+   "fieldtype": "Section Break",
+   "label": "Donor Information"
+  },
+  {
+   "default": "Member",
+   "fieldname": "donor_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Donor Type",
+   "options": "Member\nNon-Member\nOrganization",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.donor_type != 'Member'",
+   "fieldname": "donor_name",
+   "fieldtype": "Data",
+   "label": "Donor Name"
+  },
+  {
+   "depends_on": "eval:doc.donor_type == 'Member'",
+   "fieldname": "donor_member",
+   "fieldtype": "Link",
+   "label": "Donor Member",
+   "options": "Church Member"
+  },
+  {
+   "depends_on": "eval:doc.donor_type != 'Member'",
+   "fieldname": "contact_details",
+   "fieldtype": "Small Text",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "donation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Donation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donation_number",
+   "fieldtype": "Data",
+   "label": "Donation Number",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "receipt_required",
+   "fieldtype": "Check",
+   "label": "Receipt Required"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "donation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Donation Details"
+  },
+  {
+   "fieldname": "donation_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Donation Type",
+   "options": "General\nTithe\nMission\nBuilding Fund\nBenevolence\nSpecial Project\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nCheck\nBank Transfer\nCredit Card\nMobile Money\nOther"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Received",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Pending\nReceived\nCancelled"
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "Reference Number"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Small Text",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tax_details_section",
+   "fieldtype": "Section Break",
+   "label": "Tax Receipt Details"
+  },
+  {
+   "fieldname": "tax_receipt_number",
+   "fieldtype": "Data",
+   "label": "Tax Receipt Number"
+  },
+  {
+   "fieldname": "tax_receipt_date",
+   "fieldtype": "Date",
+   "label": "Tax Receipt Date"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_receipt_status",
+   "fieldtype": "Select",
+   "label": "Tax Receipt Status",
+   "options": "Not Required\nPending\nGenerated\nSent"
+  },
+  {
+   "default": "0",
+   "fieldname": "tax_receipt_sent",
+   "fieldtype": "Check",
+   "label": "Tax Receipt Sent"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Church Management",
+ "name": "Church Donation",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

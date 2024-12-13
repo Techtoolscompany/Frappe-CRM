@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:segment_name",
+ "creation": "2024-01-17 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "segment_information_section",
+  "segment_name",
+  "description",
+  "is_active",
+  "segmentation_rules_section",
+  "rules",
+  "member_query_section",
+  "query_builder",
+  "preview_members",
+  "communication_settings_section",
+  "default_email_template",
+  "default_sms_template",
+  "column_break_12",
+  "enable_email_notifications",
+  "enable_sms_notifications",
+  "enable_whatsapp_notifications"
+ ],
+ "fields": [
+  {
+   "fieldname": "segment_information_section",
+   "fieldtype": "Section Break",
+   "label": "Segment Information"
+  },
+  {
+   "fieldname": "segment_name",
+   "fieldtype": "Data",
+   "label": "Segment Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "segmentation_rules_section",
+   "fieldtype": "Section Break",
+   "label": "Segmentation Rules"
+  },
+  {
+   "fieldname": "rules",
+   "fieldtype": "Table",
+   "label": "Rules",
+   "options": "Segmentation Rule"
+  },
+  {
+   "fieldname": "member_query_section",
+   "fieldtype": "Section Break",
+   "label": "Member Query Builder"
+  },
+  {
+   "fieldname": "query_builder",
+   "fieldtype": "Code",
+   "label": "Query Builder",
+   "options": "SQL"
+  },
+  {
+   "fieldname": "preview_members",
+   "fieldtype": "Button",
+   "label": "Preview Matching Members"
+  },
+  {
+   "fieldname": "communication_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Communication Settings"
+  },
+  {
+   "fieldname": "default_email_template",
+   "fieldtype": "Link",
+   "label": "Default Email Template",
+   "options": "Email Template"
+  },
+  {
+   "fieldname": "default_sms_template",
+   "fieldtype": "Small Text",
+   "label": "Default SMS Template"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_email_notifications",
+   "fieldtype": "Check",
+   "label": "Enable Email Notifications"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_sms_notifications",
+   "fieldtype": "Check",
+   "label": "Enable SMS Notifications"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_whatsapp_notifications",
+   "fieldtype": "Check",
+   "label": "Enable WhatsApp Notifications"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Church Management",
+ "name": "Ministry Segment",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Church Pastor",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

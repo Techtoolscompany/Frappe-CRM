@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:FAM-{####}",
+ "creation": "2024-01-17 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "family_name",
+  "address",
+  "city",
+  "state",
+  "country",
+  "column_break_6",
+  "primary_contact",
+  "contact_phone",
+  "contact_email",
+  "family_segmentation_section",
+  "family_tags",
+  "column_break_12",
+  "preferred_service_time",
+  "primary_ministry_focus",
+  "family_life_stage",
+  "special_pastoral_care",
+  "section_break_17",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "family_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Family Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "primary_contact",
+   "fieldtype": "Link",
+   "label": "Primary Contact",
+   "options": "Church Member"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "family_segmentation_section",
+   "fieldtype": "Section Break",
+   "label": "Family Segmentation"
+  },
+  {
+   "fieldname": "family_tags",
+   "fieldtype": "Table",
+   "label": "Family Tags",
+   "options": "Family Tag"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preferred_service_time",
+   "fieldtype": "Link",
+   "label": "Preferred Service Time",
+   "options": "Church Service"
+  },
+  {
+   "fieldname": "primary_ministry_focus",
+   "fieldtype": "Link",
+   "label": "Primary Ministry Focus",
+   "options": "Church Ministry Role"
+  },
+  {
+   "fieldname": "family_life_stage",
+   "fieldtype": "Select",
+   "label": "Family Life Stage",
+   "options": "New Family\nYoung Family\nTeen Family\nEmpty Nest\nSingle Parent"
+  },
+  {
+   "default": "0",
+   "fieldname": "special_pastoral_care",
+   "fieldtype": "Check",
+   "label": "Special Pastoral Care"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Church Management",
+ "name": "Family Unit",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

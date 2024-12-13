@@ -1,0 +1,231 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:EVT-{####}",
+ "creation": "2024-01-17 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "event_name",
+  "event_type",
+  "start_date",
+  "end_date",
+  "column_break_5",
+  "status",
+  "registration_required",
+  "registration_deadline",
+  "section_break_9",
+  "description",
+  "venue",
+  "event_schedule",
+  "section_break_13",
+  "coordinator_section",
+  "event_coordinator",
+  "planning_team",
+  "section_break_17",
+  "registration_section",
+  "maximum_participants",
+  "registration_fee",
+  "column_break_21",
+  "current_participants",
+  "total_amount_collected",
+  "section_break_24",
+  "budget_section",
+  "estimated_budget",
+  "actual_expenses",
+  "column_break_28",
+  "budget_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "event_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Event Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Event Type",
+   "options": "Conference\nRetreat\nYouth Camp\nWorkshop\nSeminar\nOutreach\nFellowship\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Date & Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "label": "End Date & Time"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Planning",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Planning\nRegistration Open\nRegistration Closed\nOngoing\nCompleted\nCancelled"
+  },
+  {
+   "default": "0",
+   "fieldname": "registration_required",
+   "fieldtype": "Check",
+   "label": "Registration Required"
+  },
+  {
+   "depends_on": "registration_required",
+   "fieldname": "registration_deadline",
+   "fieldtype": "Date",
+   "label": "Registration Deadline"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Event Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "venue",
+   "fieldtype": "Small Text",
+   "label": "Venue"
+  },
+  {
+   "fieldname": "event_schedule",
+   "fieldtype": "Table",
+   "label": "Event Schedule",
+   "options": "Church Event Schedule"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "coordinator_section",
+   "fieldtype": "Section Break",
+   "label": "Coordination"
+  },
+  {
+   "fieldname": "event_coordinator",
+   "fieldtype": "Link",
+   "label": "Event Coordinator",
+   "options": "Church Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "planning_team",
+   "fieldtype": "Table",
+   "label": "Planning Team",
+   "options": "Church Event Team Member"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "registration_section",
+   "fieldtype": "Section Break",
+   "label": "Registration"
+  },
+  {
+   "fieldname": "maximum_participants",
+   "fieldtype": "Int",
+   "label": "Maximum Participants"
+  },
+  {
+   "fieldname": "registration_fee",
+   "fieldtype": "Currency",
+   "label": "Registration Fee"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_participants",
+   "fieldtype": "Int",
+   "label": "Current Participants",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount_collected",
+   "fieldtype": "Currency",
+   "label": "Total Amount Collected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "budget_section",
+   "fieldtype": "Section Break",
+   "label": "Budget"
+  },
+  {
+   "fieldname": "estimated_budget",
+   "fieldtype": "Currency",
+   "label": "Estimated Budget"
+  },
+  {
+   "fieldname": "actual_expenses",
+   "fieldtype": "Currency",
+   "label": "Actual Expenses"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "budget_status",
+   "fieldtype": "Select",
+   "label": "Budget Status",
+   "options": "Within Budget\nOver Budget\nUnder Budget"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Church Management",
+ "name": "Church Event",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

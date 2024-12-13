@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "creation": "2024-01-17 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "offering_type",
+  "amount",
+  "column_break_3",
+  "payment_method",
+  "reference_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "offering_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Offering Type",
+   "options": "Tithe\nGeneral Offering\nMission Offering\nBuilding Fund\nSpecial Offering\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Method",
+   "options": "Cash\nCheck\nBank Transfer\nCredit Card\nMobile Money\nOther"
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "Reference Number"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-17 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Church Management",
+ "name": "Church Service Offering",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
